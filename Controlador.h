@@ -17,6 +17,7 @@ class Controlador
     public:
         Controlador();
         bool IncluirClnts(); 
+        void Imprimir(int tipo);  
         void InOrden(ArbolBB<string> &ArbolBBper,Apuntador p);
         void PosOrden(ArbolBB<string> &ArbArbolBBperol,Apuntador p);
         void PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p);                                 

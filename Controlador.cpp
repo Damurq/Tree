@@ -5,7 +5,7 @@ Controlador::Controlador()
 };
 
 //===============================================================================================
-//INCLUIR UN CLIENTE-----------NECESARIO
+//INCLUIR UNA PERSONA-----------NECESARIO
 //===============================================================================================
 bool Controlador::IncluirClnts()
 {
@@ -15,7 +15,7 @@ bool Controlador::IncluirClnts()
 		string nombre;
 		vg.Limpiar();
 		cout<<"=============================================================================="<<endl;
-  		cout<<"----------------------------  DATOS DE LA PERSONA  -----------------------------"<<endl;
+  		cout<<"--------------------------  DATOS DE LA PERSONA  -----------------------------"<<endl;
       	cout<<"=============================================================================="<<endl;
 	do{
 		nombre=vg.LeerString("Intoduzca Nombre:     ");
@@ -38,6 +38,70 @@ bool Controlador::IncluirClnts()
 };
 
 
+//===============================================================================================
+//IMPRIMIR EN PRE IN POST (1-IMPRIMIR Y VACIRA,2-IMPRIMIR)-----------FUNCIONAL
+//===============================================================================================
+void Controlador::Imprimir(int tipo)
+{
+	string nomb;
+	if(TreePers.Vacio())
+	{
+		vg.Limpiar();
+		cout<<"=============================================================================="<<endl;
+  		cout<<"---------------------------  EL ARBOL ESTA VACIO  ----------------------------"<<endl;
+      	cout<<"=============================================================================="<<endl;
+		vg.Pausa();
+	}
+	else
+	{
+		//IMPRIMIR Y VACIAR LA COLA
+		if (tipo==2)
+		{
+			vg.Limpiar();
+			cout<<"=============================================================================="<<endl;
+  			cout<<"--------------------------------  INORDEN  ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			InOrden(TreePers, TreePers.ObtRaiz());
+			vg.Pausa();
+		}
+		//IMPRIMIR SIN VACIAR
+		else if (tipo==3)
+		{
+			vg.Limpiar();
+			cout<<"=============================================================================="<<endl;
+  			cout<<"---------------------------------  POSORDEN  ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			PosOrden(TreePers, TreePers.ObtRaiz());
+			vg.Pausa();
+		}
+		else if (tipo==1)
+		{
+			vg.Limpiar();
+			cout<<"=============================================================================="<<endl;
+  			cout<<"---------------------------------  PREORDEN ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			PreOrden(TreePers, TreePers.ObtRaiz());
+			vg.Pausa();
+		}
+		else if (tipo==4)
+		{
+			vg.Limpiar();
+			cout<<"=============================================================================="<<endl;
+  			cout<<"---------------------------------  PREORDEN ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			PreOrden(TreePers, TreePers.ObtRaiz());
+			cout<<"=============================================================================="<<endl;
+  			cout<<"--------------------------------  INORDEN  ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			InOrden(TreePers, TreePers.ObtRaiz());
+			cout<<"=============================================================================="<<endl;
+  			cout<<"---------------------------------  POSORDEN  ----------------------------------"<<endl;
+      		cout<<"=============================================================================="<<endl;
+			PosOrden(TreePers, TreePers.ObtRaiz());
+			vg.Pausa();			
+		}
+	}
+};
 
 void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
@@ -50,6 +114,8 @@ void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 		InOrden(ArbolBBper,ArbolBBper.ObtDer(p));
 	};
 };
+
+
 void Controlador::PosOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
 	string nomb;
@@ -61,6 +127,8 @@ void Controlador::PosOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 		cout << nomb;
 	};
 };
+
+
 void Controlador::PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
 	string nomb;
