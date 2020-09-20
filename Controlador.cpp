@@ -37,7 +37,6 @@ bool Controlador::IncluirPrsn()
 	}
 };
 
-
 //===============================================================================================
 //IMPRIMIR EN PRE IN POST (1-IMPRIMIR Y VACIRA,2-IMPRIMIR)-----------FUNCIONAL
 //===============================================================================================
@@ -102,7 +101,6 @@ void Controlador::Imprimir(int tipo)
 		}
 	}
 };
-
 
 void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
