@@ -36,7 +36,7 @@ template <class Tipo>
 
 	Nodo<Tipo> *ObtDer(Nodo<Tipo> *p);
 	Nodo<Tipo> *ObtIzq(Nodo<Tipo> *p);
-	Tipo ObtInf(Nodo<Tipo> *p);
+	Tipo ObtInfo(Nodo<Tipo> *p);
           		
   };
 

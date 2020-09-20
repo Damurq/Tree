@@ -264,7 +264,7 @@ Nodo<Tipo> Arbol<Tipo>::*ObtIzq(Nodo<Tipo> *p)
 }
 
 template<class Tipo>
-Tipo Arbol<Tipo>::ObtInf(Nodo<Tipo> *p)
+Tipo Arbol<Tipo>::ObtInfo(Nodo<Tipo> *p)
 {
   if(p-!=NULL)
     return  p->ObtInfo();
