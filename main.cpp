@@ -33,8 +33,8 @@ int main()
       cout<<"---------------------------  SUB-MENU DE OPCIONES  ---------------------------"<<endl;
       cout<<"=============================================================================="<<endl;
       cout<<"1-) Imprimir en PREORDEN"<<endl;
-      cout<<"2-) Imprimir INORDEN"<<endl;
-      cout<<"3-) Imprimir POSTORDEN"<<endl;
+      cout<<"2-) Imprimir en INORDEN"<<endl;
+      cout<<"3-) Imprimir en POSTORDEN"<<endl;
       cout<<"4-) Imprimir todo"<<endl;
       cout<<"5-) Atras\n"<<endl;
       valor2= vg.LeerValidarNro(" Opcion seleccionada : ",1,5);
