@@ -21,7 +21,7 @@ bool Controlador::IncluirPrsn()
 		nombre=vg.LeerString("Intoduzca Nombre:     ");
 		TreePers.Insertar(nombre);
 		cout<<"\n=============================================================================="<<endl;
-		resp=vg.LeerValidarNro("\t\tDesea agregar otro Cliente a la cola 1[SI] 2[NO]: ",1,2);	
+		resp=vg.LeerValidarNro("\t\tDesea agregar otro Persona  1[SI] 2[NO]: ",1,2);	
 		cout<<"=============================================================================="<<endl;	
 	}while(resp==1);
 	return true;
