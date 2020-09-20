@@ -235,7 +235,7 @@ Nodo<Tipo> *Arbol<Tipo>::CopiaArbol(Nodo<Tipo> *tree)
 template<class Tipo>
 Nodo<Tipo> *Arbol<Tipo>::ObtDer(Nodo<Tipo> *p)
 {
-  nodo<Tipo> *f;
+  Nodo<Tipo> *f;
   f=NULL;
   if(!Vacio())
   {
@@ -249,9 +249,9 @@ Nodo<Tipo> *Arbol<Tipo>::ObtDer(Nodo<Tipo> *p)
 
 
 template<class Tipo>
-Nodo<Tipo> Arbol<Tipo>::*ObtIzq(Nodo<Tipo> *p)
+Nodo<Tipo> *Arbol<Tipo>::ObtIzq(Nodo<Tipo> *p)
 {
-  nodo<Tipo> *f;
+  Nodo<Tipo> *f;
   f=NULL;
   if(!Vacio())
   {
@@ -266,6 +266,6 @@ Nodo<Tipo> Arbol<Tipo>::*ObtIzq(Nodo<Tipo> *p)
 template<class Tipo>
 Tipo Arbol<Tipo>::ObtInfo(Nodo<Tipo> *p)
 {
-  if(p-!=NULL)
+  if(p!=NULL)
     return  p->ObtInfo();
 }

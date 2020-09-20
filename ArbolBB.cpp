@@ -40,10 +40,10 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
 {
   Apuntador p,nuevo,ant;
   Tipo auxiliar;
-  
-  nuevo=CrearNodo(valor);
+
+  nuevo=this->CrearNodo(valor);
   if (Arbol<Tipo>::ObtRaiz()==NULL)        
-	    AsigRaiz(nuevo);
+	    this->AsigRaiz(nuevo);
   else
   {
   p=Arbol<Tipo>::ObtRaiz();     	    
@@ -58,14 +58,14 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
                   ant=p;     
                   p=p->ObtIzq();
                   if (p==NULL)
-                    InsIzquierdo(ant,valor);
+                    this->InsIzquierdo(ant,valor);
                 }    
               else
                 {
                   ant=p;
                   p=p->ObtDer();
                   if (p==NULL) 
-                    InsDerecho(ant,valor);
+                    this->InsDerecho(ant,valor);
                 };
           };
   };	
@@ -224,3 +224,41 @@ else  {	              // Caso dos hijos:
 */
 
 
+//===============================================================================================
+//COMPARA 2 STRING Y RETORNA true SI EL PRIMER STRING VA ADELANTE O ES IGUAL -----------FUNCIONAL
+//===============================================================================================
+/*template <class Tipo>
+bool ArbolBB<Tipo>::Comparar(string nom1,string nom2)
+{
+	int size1=nom1.size();
+	int size2=nom2.size();
+	int lim;
+	if(size1<size2)
+		lim=size1;
+	else 
+		lim=size2;
+	for (int i = 0; i < lim; i++)
+	{
+		if (nom1[i]<nom2[i])
+		{
+			return true;
+			//return nom1;
+		}
+		else if (nom1[i]>nom2[i])
+		{
+			return false;
+			//retunr nom2;
+		}
+	}
+	if (size1==size2)
+	{
+		return true;
+	}
+	else if(size1<size2)
+		return true;
+	else
+	{
+			return false;
+	}
+	
+}*/

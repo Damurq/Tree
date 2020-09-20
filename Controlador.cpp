@@ -103,6 +103,7 @@ void Controlador::Imprimir(int tipo)
 	}
 };
 
+
 void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
 	string nomb;
@@ -115,7 +116,6 @@ void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 	};
 };
 
-
 void Controlador::PosOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
 	string nomb;
@@ -127,7 +127,6 @@ void Controlador::PosOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 		cout << nomb;
 	};
 };
-
 
 void Controlador::PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {

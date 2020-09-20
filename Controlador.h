@@ -5,11 +5,13 @@
 #include <iostream>
 #include "ArbolBB.h"
 #include "VGeneral.h"
+#include "Nodo.h"
+
 //#include "Persona.h"
 
 class Controlador
 {
-    typedef Nodo<Tipo>* Apuntador;     
+    typedef Nodo<string>* Apuntador;     
     private:
         //ArbolBB<Persona> TreePers;
         ArbolBB<string> TreePers;
@@ -20,7 +22,10 @@ class Controlador
         void Imprimir(int tipo);  
         void InOrden(ArbolBB<string> &ArbolBBper,Apuntador p);
         void PosOrden(ArbolBB<string> &ArbArbolBBperol,Apuntador p);
-        void PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p);                                 
+        void PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p);     
+        /*void InOrden(ArbolBB<string> &ArbolBBper);
+        void PosOrden(ArbolBB<string> &ArbolBBper);
+        void PreOrden(ArbolBB<string> &ArbolBBper);   */                          
         
 };
 
