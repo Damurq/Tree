@@ -12,7 +12,6 @@ public:
    bool Insertar(Tipo valor); //Hay que poner a p de salida para que se actualice el valor de p al comienzo
    bool InsertarRecursivo(Nodo<Tipo>* p, Tipo valor);
    bool Eliminar(Tipo &valor);
-   bool Comparar(string nom1,string nom2);
 };
 #include "ArbolBB.cpp"
 #endif
