@@ -7,7 +7,7 @@ Controlador::Controlador()
 //===============================================================================================
 //INCLUIR UNA PERSONA-----------NECESARIO
 //===============================================================================================
-bool Controlador::IncluirClnts()
+bool Controlador::IncluirPrsn()
 {
 	if(!TreePers.Lleno())
 	{

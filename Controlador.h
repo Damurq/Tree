@@ -16,7 +16,7 @@ class Controlador
         VGeneral vg;
     public:
         Controlador();
-        bool IncluirClnts(); 
+        bool IncluirPrsn(); 
         void Imprimir(int tipo);  
         void InOrden(ArbolBB<string> &ArbolBBper,Apuntador p);
         void PosOrden(ArbolBB<string> &ArbArbolBBperol,Apuntador p);
