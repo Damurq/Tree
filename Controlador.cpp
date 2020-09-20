@@ -98,6 +98,7 @@ void Controlador::Imprimir(int tipo)
       		cout<<"=============================================================================="<<endl;
 			PosOrden(TreePers, TreePers.ObtRaiz());
 			cout<<endl;
+			cout<<endl;
 			vg.Pausa();			
 		}
 	}
