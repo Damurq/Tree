@@ -1,3 +1,4 @@
+#include "Nodo.h"   
 
 template <class Tipo>
 void Nodo<Tipo>::AsigInfo(Tipo in){

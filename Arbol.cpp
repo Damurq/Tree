@@ -1,5 +1,5 @@
 #include <stdlib.h>    // Para utilizar NULL
-
+#include "Arbol.h" 
 
 /* Funcion Miembro que Inicializa el Arbol Binario a traves del Apuntador Raiz*/
 template<class Tipo>

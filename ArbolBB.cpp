@@ -1,3 +1,5 @@
+#include "ArbolBB.h"
+
 template <class Tipo>
 Nodo<Tipo>* ArbolBB<Tipo>::Buscar(Nodo<Tipo>* p,Tipo valor)
 {
@@ -50,22 +52,22 @@ bool ArbolBB<Tipo>::Insertar(Tipo valor)
       auxiliar=p->ObtInfo();      
       if  (valor==auxiliar)
            return false;  
-else
-    if  (valor<auxiliar)
-           {    	 
-             ant=p;     
-             p=p->ObtIzq();
-             if (p==NULL)
-               InsIzquierdo(ant,valor);
-           }    
-        else
-          {
-             ant=p;
-             p=p->ObtDer();
-             if (p==NULL) 
-               InsDerecho(ant,valor);
-           };
-     };
+      else
+          if  (valor<auxiliar)
+                {    	 
+                  ant=p;     
+                  p=p->ObtIzq();
+                  if (p==NULL)
+                    InsIzquierdo(ant,valor);
+                }    
+              else
+                {
+                  ant=p;
+                  p=p->ObtDer();
+                  if (p==NULL) 
+                    InsDerecho(ant,valor);
+                };
+          };
   };	
   return true;	
 };
@@ -129,21 +131,21 @@ if (encontrado)   {   //la Clave esta en el arbol
          if (p->ObtDer()==NULL) {  //Tiene un posible Hijo Izquierdo:   
               if (p==Arbol<Tipo>::ObtRaiz())  //Caso Raiz
                 AsigRaiz(p->ObtIzq());	         //Asigna el hijo izquierdo como Raiz	
-              else    //Se actualiza el Der o Izq del padre según sea el caso
+              else    //Se actualiza el Der o Izq del padre segï¿½n sea el caso
                 if (ant->ObtIzq()==p)  ant->AsigIzq(p->ObtIzq());
                 else                    ant->AsigDer(p->ObtIzq());
         }
         else if (p->ObtIzq()==NULL) { 	 //Tiene un posible Hijo Derecho:
               if (p==Arbol<Tipo>::ObtRaiz()) //Caso Raiz
                  AsigRaiz(p->ObtDer()); //Asigna el hijo derecho como Raiz	
-              else //Se actualiza el Der o Izq del padre según sea el caso
+              else //Se actualiza el Der o Izq del padre segï¿½n sea el caso
             	  if (ant->ObtIzq()==p) ant->AsigIzq(p->ObtDer());
                   else  ant->AsigDer(p->ObtDer());
 
 }
 else  {	              // Caso dos hijos:				
                 ant=p;
-              //El nodo a eliminar será el mas a la derecha del subarbol izquierdo
+              //El nodo a eliminar serï¿½ el mas a la derecha del subarbol izquierdo
                 temp=p->ObtIzq(); 
                 while (temp->ObtDer()!=NULL) {
                 	    ant=temp;
@@ -188,21 +190,21 @@ if (encontrado)   {   //la Clave esta en el arbol
          if (p->ObtDer()==NULL) {  //Tiene un posible Hijo Izquierdo:   
               if (p==Arbol<Tipo>::ObtRaiz())  //Caso Raiz
                 AsigRaiz(p->ObtIzq());	         //Asigna el hijo izquierdo como Raiz	
-              else    //Se actualiza el Der o Izq del padre según sea el caso
+              else    //Se actualiza el Der o Izq del padre segï¿½n sea el caso
                 if (ant->ObtIzq()==p)  ant->AsigIzq(p->ObtIzq());
                 else                    ant->AsigDer(p->ObtIzq());
         }
         else if (p->ObtIzq()==NULL) { 	 //Tiene un posible Hijo Derecho:
               if (p==Arbol<Tipo>::ObtRaiz()) //Caso Raiz
                  AsigRaiz(p->ObtDer()); //Asigna el hijo derecho como Raiz	
-              else //Se actualiza el Der o Izq del padre según sea el caso
+              else //Se actualiza el Der o Izq del padre segï¿½n sea el caso
             	  if (ant->ObtIzq()==p) ant->AsigIzq(p->ObtDer());
                   else  ant->AsigDer(p->ObtDer());
 
 }
 else  {	              // Caso dos hijos:				
                 ant=p;
-              //El nodo a eliminar será el mas a la derecha del subarbol izquierdo
+              //El nodo a eliminar serï¿½ el mas a la derecha del subarbol izquierdo
                 temp=p->ObtIzq(); 
                 while (temp->ObtDer()!=NULL) {
                 	    ant=temp;
@@ -220,3 +222,5 @@ else  {	              // Caso dos hijos:
    else return false;    //En caso de que la clave no se encuentre!
 };
 */
+
+
