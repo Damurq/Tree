@@ -231,3 +231,41 @@ Nodo<Tipo> *Arbol<Tipo>::CopiaArbol(Nodo<Tipo> *tree)
       }
       else return NULL; 
 }
+
+template<class Tipo>
+Nodo<Tipo> *Arbol<Tipo>::ObtDer(Nodo<Tipo> *p)
+{
+  nodo<Tipo> *f;
+  f=NULL;
+  if(!Vacio())
+  {
+    if(p->ObtDer()!=NULL)
+      f=p->ObtDer();
+    else 
+      f=NULL;
+  }
+  return f;
+}
+
+
+template<class Tipo>
+Nodo<Tipo> Arbol<Tipo>::*ObtIzq(Nodo<Tipo> *p)
+{
+  nodo<Tipo> *f;
+  f=NULL;
+  if(!Vacio())
+  {
+    if(p->ObtIzq()!=NULL)
+      f=p->ObtIzq();
+    else 
+      f=NULL;
+  }
+  return f;
+}
+
+template<class Tipo>
+Tipo Arbol<Tipo>::ObtInf(Nodo<Tipo> *p)
+{
+  if(p-!=NULL)
+    return  p->ObtInfo();
+}

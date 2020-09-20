@@ -15,6 +15,7 @@ class Nodo  {
        Nodo<Tipo>* ObtIzq();
        void AsigDer(Nodo<Tipo>* p);
        Nodo<Tipo>* ObtDer();   
+       
        };
       
 #include "Nodo.cpp"   

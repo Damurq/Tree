@@ -5,36 +5,36 @@ Controlador::Controlador()
 };
 
 
-void InOrden(Arbol<char> &Arbol,Apuntador p)
+void Controlador::InOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
-char simbolo;
-if (p!=NULL)
-{
-InOrden(Arbol,Arbol.ObtIzq(p));
-simbolo=Arbol.ObtInfo(p);
-cout << simbolo;
-InOrden(Arbol,Arbol.ObtDer(p));
+	string nomb;
+	if (p!=NULL)
+	{
+		InOrden(ArbolBBper,ArbolBBper.ObtIzq(p));
+		nomb=ArbolBBper.ObtInfo(p);
+		cout << nomb;
+		InOrden(ArbolBBper,ArbolBBper.ObtDer(p));
+	};
 };
-};
-void PosOrden(Arbol<char> &Arbol,Apuntador p)
+void Controlador::PosOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
-char simbolo;
-if (p!=NULL)
-{
-PosOrden(Arbol,Arbol.ObtIzq(p));
-PosOrden(Arbol,Arbol.ObtDer(p));
-simbolo=Arbol.ObtInfo(p);
-cout << simbolo;
+	string nomb;
+	if (p!=NULL)
+	{
+		PosOrden(ArbolBBper,ArbolBBper.ObtIzq(p));
+		PosOrden(ArbolBBper,ArbolBBper.ObtDer(p));
+		nomb=ArbolBBper.ObtInfo(p);
+		cout << nomb;
+	};
 };
-};
-void PreOrden(Arbol<char> &Arbol,Apuntador p)
+void Controlador::PreOrden(ArbolBB<string> &ArbolBBper,Apuntador p)
 {
-char simbolo;
-if (p!=NULL)
-{
-simbolo=Arbol.ObtInfo(p);
-cout << simbolo;
-PreOrden(Arbol,Arbol.ObtIzq(p));
-PreOrden(Arbol,Arbol.ObtDer(p));
-};
+	string nomb;
+	if (p!=NULL)
+	{
+		nomb=ArbolBBper.ObtInfo(p);
+		cout << nomb;
+		PreOrden(ArbolBBper,ArbolBBper.ObtIzq(p));
+		PreOrden(ArbolBBper,ArbolBBper.ObtDer(p));
+	};
 };
